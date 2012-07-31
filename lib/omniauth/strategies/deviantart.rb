@@ -24,6 +24,7 @@ module OmniAuth
       end
       
       def raw_info
+        binding.pry
         @raw_info ||= access_token.get('https://www.deviantart.com/api/draft15/user/whoami').parsed
       end
       #
