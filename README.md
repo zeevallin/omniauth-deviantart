@@ -39,7 +39,11 @@ Here's an example *Auth Hash* available in `request.env['omniauth.auth']`:
     "expires_at" => "yyyy-mm-dd hh:mm:ss"
   },
   "extra" => {
-    "raw_info" => { "username":"deviantid", "symbol":"~", "usericonurl":"http://a.deviantart.net/avatars/k/o/deviantid.png?15" }
+    "raw_info" => {
+      "username" => "deviantid",
+      "symbol" => "~",
+      "usericonurl" => "http://a.deviantart.net/avatars/k/o/deviantid.png?15"
+    }
   }
 }
 ```
