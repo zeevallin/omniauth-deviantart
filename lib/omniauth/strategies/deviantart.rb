@@ -24,7 +24,7 @@ module OmniAuth
       end
       
       def raw_info
-        @raw_info ||= access_token.get('/user/whoami').parsed
+        @raw_info ||= access_token.get('https://www.deviantart.com/oauth2/draft15/user/whoami').parsed
       end
       #
       # def email
