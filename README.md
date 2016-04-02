@@ -14,9 +14,11 @@ Then `bundle install`.
 
 ## Basic Usage
 
-    use OmniAuth::Builder do
-    	provider "deviantart", ENV['DEVIANTART_APP_ID'], ENV['DEVIANTART_SECRET']
-    end
+```ruby
+use OmniAuth::Builder do
+	provider "deviantart", ENV['DEVIANTART_APP_ID'], ENV['DEVIANTART_SECRET']
+end
+```
 
 ## DeviantART Docs
 
