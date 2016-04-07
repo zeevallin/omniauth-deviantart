@@ -10,7 +10,7 @@ module OmniAuth
         :token_url => 'https://www.deviantart.com/oauth2/token'
       }
 
-      uid { raw_info['username'] }
+      uid { raw_info['userid'] }
       
       info do
         {
@@ -25,9 +25,13 @@ module OmniAuth
       end
       
       def raw_info
-        @raw_info ||= access_token.get('https://www.deviantart.com/api/v1/oauth2/user/whoami', params: { token: access_token.token }).parsed
+        @raw_info ||= access_token.get('https://www.deviantart.com/api/v1/oauth2/user/whoami?expand=user.profile,user.details,user.geo,user.stats', params: { token: access_token.token }).parsed
       end
       
+      def callback_url
+        full_host + script_name + callback_path
+      end
+
     end
   end
 end
